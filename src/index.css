@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply font-body text-gray-600 bg-white antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading text-accent tracking-tight;
+  }
+  :root {
+    --color-primary: #DC2626;
+    --color-primary-dark: #B91C1C;
+    --color-accent: #0A0A0A;
+  }
+}
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
