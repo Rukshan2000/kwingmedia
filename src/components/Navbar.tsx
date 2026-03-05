@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { MenuIcon, XIcon } from 'lucide-react';
+import logo from '../assets/logo.png';
 
 const navLinks = [
   { name: 'Home',      href: '#home' },
@@ -9,38 +10,6 @@ const navLinks = [
   { name: 'Portfolio', href: '#portfolio' },
   { name: 'Contact',   href: '#contact' },
 ];
-
-// Animated wing logo mark
-function WingMark({ size = 30 }: { size?: number }) {
-  return (
-    <motion.svg
-      width={size} height={size}
-      viewBox="0 0 32 32" fill="none"
-      className="text-primary flex-shrink-0"
-      animate={{ y: [0, -2, 0] }}
-      transition={{ duration: 4, repeat: Infinity, ease: 'easeInOut' }}
-    >
-      {/* Left wing */}
-      <path d="M16 19 C11 14 5 11 2 7 C6 12 11 16 15.5 19.5Z"
-        fill="currentColor" opacity="0.95"/>
-      {/* Right wing */}
-      <path d="M16 19 C21 14 27 11 30 7 C26 12 21 16 16.5 19.5Z"
-        fill="currentColor" opacity="0.95"/>
-      {/* Spine */}
-      <line x1="16" y1="11" x2="16" y2="26"
-        stroke="currentColor" strokeWidth="1.1" strokeLinecap="round" opacity="0.65"/>
-      {/* Barb ticks */}
-      {[0,1,2,3].map(i => (
-        <React.Fragment key={i}>
-          <line x1={16} y1={13.5+i*3} x2={13.2-i*0.3} y2={12.5+i*3}
-            stroke="currentColor" strokeWidth="0.65" strokeLinecap="round" opacity="0.45"/>
-          <line x1={16} y1={13.5+i*3} x2={18.8+i*0.3} y2={12.5+i*3}
-            stroke="currentColor" strokeWidth="0.65" strokeLinecap="round" opacity="0.45"/>
-        </React.Fragment>
-      ))}
-    </motion.svg>
-  );
-}
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -84,26 +53,12 @@ export function Navbar() {
         <div className="flex justify-between items-center">
 
           {/* ── Logo ── */}
-          <a href="#home" className="flex items-center gap-2.5 group" aria-label="Kewings Media Home">
-            <WingMark size={30} />
-            <div className="leading-none">
-              <span
-                className="font-bold text-accent block leading-none"
-                style={{
-                  fontFamily: "'Cormorant Garamond', Georgia, serif",
-                  fontSize: '1.35rem',
-                  letterSpacing: '-0.01em',
-                }}
-              >
-                Kewings
-              </span>
-              <span
-                className="text-primary block"
-                style={{ fontSize: '0.6rem', letterSpacing: '0.28em', textTransform: 'uppercase' }}
-              >
-                Media
-              </span>
-            </div>
+          <a href="#home" className="flex items-center group" aria-label="Kewings Media Home">
+            <img 
+              src={logo} 
+              alt="Kewings Media" 
+              className="h-10 w-auto object-contain"
+            />
           </a>
 
           {/* ── Desktop Nav ── */}
