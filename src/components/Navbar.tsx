@@ -56,7 +56,7 @@ export function Navbar() {
           <a href="#home" className="flex items-center group" aria-label="Kewings Media Home">
             <img 
               src={logo} 
-              alt="Kewings Media" 
+              alt="Kwings Media" 
               className="h-10 w-auto object-contain"
             />
           </a>

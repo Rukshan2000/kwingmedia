@@ -182,7 +182,7 @@ export function WhyChooseUsSection() {
             style={{ fontSize: 'clamp(2rem, 4.5vw, 3.2rem)', letterSpacing: '-0.01em' }}>
             Why Choose{' '}
             <span className="text-primary relative inline-block" style={{ fontStyle: 'italic' }}>
-              Kewings Media
+              Kwings Media
               <motion.span
                 className="absolute left-0 -bottom-1 h-[2px] bg-primary rounded-full"
                 initial={{ width: 0 }}

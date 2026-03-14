@@ -61,7 +61,7 @@ export function Footer() {
         {/* Bottom Bar */}
         <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-gray-500 text-sm">
-            © 2026 Kewings Media. All rights reserved.
+            © 2026 Kwings Media. All rights reserved.
           </p>
           <div className="flex gap-6 text-sm text-gray-500">
             <a
